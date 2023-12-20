@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300&family=Dancing+Script:wght@700&family=Expletus+Sans:ital,wght@1,500&family=Fira+Sans+Extra+Condensed:ital,wght@1,100&family=Poppins:wght@100&family=Sansita+Swashed:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300&family=Expletus+Sans:ital,wght@1,500&family=Fira+Sans+Extra+Condensed:ital,wght@1,100&family=Poppins:wght@100&family=Sansita+Swashed:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Borel&display=swap");
+/************Navbar first part of navbar**************/
+
+.textfor {
+  font-family: "Dancing Script", cursive;
+  font-size: 3.2rem;
+  text-transform: capitalize;
+  line-height: 3rem;
+  letter-spacing: 0.3rem;
+}
+
+input:focus {
+  outline: none;
+}
+.round {
+  border-top-right-radius: 1rem;
+}
+.nav-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+}
+
+.searchBar {
+  justify-self: center;
+  border-color: inherit;
+  border-bottom-left-radius: 1rem;
+  line-height: 2rem;
+  width: 18.2rem;
+
+}
+
+.loginAndCart {
+  justify-self: end;
+  align-items: center;
+}
+
+/**************using media query for first part of navbar***************/
+
+@media (min-width: 340px) and (max-width: 990px) {
+  .nav-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+ .searchBar{
+  width: 15rem;
+ }
+   
+  .loginAndCart {
+    display: flex;
+    flex-direction: column;
+    margin-top: 13px;
+    justify-content: center;
+  }
+  
+  
+}
+
+/***********css for second part of navbar project***************/
+.linkToPages {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    text-align: center;
+    align-items: center;
+    text-transform: capitalize;
+    
+  }
+
+
+/***********css for index.html page**************/
+.main {
+  min-height: 100vh;
+  background-image: url("https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148881321.jpg?size=626&ext=jpg&ga=GA1.1.356971862.1691771204&semt=ais");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Borel", cursive;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.nav-item,
+.butt,
+.nav-link {
+  font-family: "Bricolage Grotesque";
+  font-display: 23px;
+  color: black;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+#feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  text-transform: capitalize;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+#puttingCardElementHere {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  grid-area: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+.makingThingsFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.makingHeadingCenterAlign {
+  justify-content: center;
+  vertical-align: middle;
+  min-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.main span {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.52rem;
+  font-weight: 400;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: black;
+}
+.show {
+  display: flex;
+}
+
+/* css for cartpage */
+
+.cart {
+  display: grid;
+  grid-template-columns: 2.5fr 2fr;
+  grid-template-rows: none;
+  font-family: "Courier New", Courier, monospace;
+  text-transform: capitalize;
+  padding: 0 5.6rem;
+}
+.itemsInCart {
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  justify-content: center;
+  text-align: center;
+  text-transform: capitalize;
+  border: 1px solid grey;
+  border-radius: 0.8rem;
+  justify-self: center;
+  box-shadow: 2px 2px 2px #808080;
+  padding: 0.5rem;
+  margin: 0 1.2rem;
+}
+.itemsInCart h3 {
+  text-transform: capitalize;
+}
+.card-heading {
+  align-items: center;
+  justify-content: center;
+}
+.cart-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+.cart-body img {
+  border-radius: 0.3rem;
+}
+.cart-img {
+  justify-self: center;
+}
+.price {
+  float: left;
+  margin-right: 0.5rem;
+  justify-self: center;
+}
+.price-title {
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.itemsInCart button {
+  text-transform: capitalize;
+}
+
+.cart-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: start;
+}
+.cart-input input {
+  grid-template-columns: none;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: start;
+}
+.cart-input button {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.summary {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  margin-left: 1rem;
+  border: 1px solid gray;
+  border-radius: 0.8rem;
+  padding: 0.5rem;
+  min-width: fit-content;
+  box-shadow: 2px 2px 2px #808080;
+}
+
+.summary .btn {
+  max-height: fit-content;
+  justify-self: center;
+  text-transform: uppercase;
+  color: black;
+}
+.dist-btw {
+  display: flex;
+  justify-content: space-between;
+}
+.sum-head {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/**********media query for cart **********/
+@media (min-width: 360px) and (max-width: 795px) {
+  .cart {
+    max-width: fit-content;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 0.8fr;
+    gap: 2%;
+    padding: 1.3rem;
+    align-items: center;
+  }
+  .itemsInCart {
+    justify-self: center;
+    width: 90vw;
+    margin: 0% auto;
+  }
+
+  .summary {
+    padding: 1.3rem;
+    width: 90vw;
+    justify-self: center;
+    margin: 0% auto;
+  }
+  .cart-input {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: start;
+  }
+}
+@media (min-width: 700px) and (max-width: 940px) {
+  .cart-input {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: start;
+  }
+}
+
+/*************allproductscss*****************/
+.hover-card {
+  transform: all 0.3s;
+}
+.hover-card:hover {
+  scale: 1.1;
+}
