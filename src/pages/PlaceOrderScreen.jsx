@@ -46,7 +46,7 @@ const {role} = useSelector(store=>store.auth);
     try {
       if(role==="admin"){
         const response = await axios.get(
-          `http://localhost:5000/api/v1/order/`,
+          `${import.meta.env.VITE_DOMAIN_NAME}/api/v1/order/`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -62,7 +62,7 @@ const {role} = useSelector(store=>store.auth);
       }
       if (role==="user") {
         const response = await axios.get(
-          `http://localhost:5000/api/v1/order/getCurrntUserOrder/${userID}`,
+          `${import.meta.env.VITE_DOMAIN_NAME}/api/v1/order/getCurrntUserOrder/${userID}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -80,7 +80,7 @@ const {role} = useSelector(store=>store.auth);
     } catch (error) {
       console.log(error);
     }
-    console.log(orderItems);
+  //  console.log(orderItems);
   };
   useEffect(()=>{
     fetchingData()

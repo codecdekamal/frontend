@@ -12,7 +12,7 @@ export default function Checkout() {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("https://localhost:5000/api/v1/order/", {
+    fetch(`${import.meta.env.VITE_DOMAIN_NAME}/api/v1/order/`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ items: [{ id: "xl-tshirt" }] }),

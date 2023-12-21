@@ -28,7 +28,7 @@ function Addproduct({productId}) {
   const fetchingData = async() =>{
     try {
         const formData = new FormData();
-      const response = await axios.patch(`http://localhost:5000/api/v1/products/${productId}`,ProductDetails,{
+      const response = await axios.patch(`${import.meta.env.VITE_DOMAIN_NAME}/api/v1/products/${productId}`,ProductDetails,{
         headers: {
             Authorization: `Bearer ${token}`,
           },

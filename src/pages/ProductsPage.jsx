@@ -26,9 +26,10 @@ const ProductPage = () => {
   };
   const fetchData = async () => {
     try {
+      console.log()
       setLoading(true)
       const response = await axios.get(
-        `https://backened-0ueb.onrender.com/api/v1/products/productpage/${category}`,
+        `${import.meta.env.VITE_DOMAIN_NAME}/api/v1/products/productpage/${category}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -47,7 +48,7 @@ const ProductPage = () => {
     }
   };
   const settingSrc = (imagePath) => {
-    const domain = "http://localhost:5000";
+    const domain = `${import.meta.env.VITE_DOMAIN_NAME}`;
     if (imagePath.startsWith("/uploads")) {
       return `${domain}${imagePath}`;
     }

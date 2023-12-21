@@ -25,7 +25,7 @@ function Addproduct({productId}) {
       fd.append("img", img);
       console.log(fd)
       const response = await axios.post(
-          `http://localhost:5000/api/v1/products/uploadImage/${productId}`,
+          `${import.meta.env.VITE_DOMAIN_NAME}/api/v1/products/uploadImage/${productId}`,
           fd,
           {
             headers: {

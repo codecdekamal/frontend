@@ -1,6 +1,6 @@
 import React from 'react'
 const settingSrc = (imagePath) => {
-    const domain = "http://localhost:5000";
+    const domain = `${import.meta.env.VITE_DOMAIN_NAME}`
     if (imagePath.startsWith("/uploads")) {
       return `${domain}${imagePath}`;
     }

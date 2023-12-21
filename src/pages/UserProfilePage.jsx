@@ -4,17 +4,21 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 import Navbar from "../component/Navbar/Navbar";
 import NavSec from "../component/Navbar/NavSec";
+import Loadeer from "../component/Loadeer";
 const UserProfilePage = () => {
+  const [loading,setLoading] = useState(false)
     const [userData,setUserData] = useState({})
     const {userID,token} = useSelector(store=>store.auth)
     const fetchData = async () =>{
-        const response = await axios.get(`http://localhost:5000/api/v1/user/${userID}`,{
+      setLoading(true)
+        const response = await axios.get(`${import.meta.env.VITE_DOMAIN_NAME}/api/v1/user/${userID}`,{
           headers:{
             Authorization:`Bearer ${token}`
           }
         })
   console.log(response.data)
   setUserData(response.data.data)
+  setLoading(false)
       }
       useEffect(()=>{
         fetchData()
@@ -24,6 +28,7 @@ const UserProfilePage = () => {
     <Navbar></Navbar>
     <NavSec></NavSec>
         <Card>
+        {loading && <Loadeer />}
     <CardBody>
       <CardTitle className="mb-3 mx-3">User Details</CardTitle>
       <ListGroup variant="flush">

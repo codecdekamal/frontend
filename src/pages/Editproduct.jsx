@@ -26,7 +26,7 @@ const onClickHandler = (id) =>{
   }
 }
 const fetchData = async () =>{
-  const response = await axios.get("http://localhost:5000/api/v1/products/",{
+  const response = await axios.get(`${import.meta.env.VITE_DOMAIN_NAME}/api/v1/products/`,{
     headers:{
       Authorization:`Bearer ${token}`
     }

@@ -34,7 +34,7 @@ const Login = () => {
     const fetchingData = async () => {
       try {
         const resp = await axios.post(
-          "http://localhost:5000/api/v1/auth/login",
+         `${import.meta.env.VITE_DOMAIN_NAME}/api/v1/auth/login`,
           userInput
         );
         dispatch(login(resp.data));

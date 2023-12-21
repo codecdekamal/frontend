@@ -29,7 +29,7 @@ function Addproduct() {
   });
   const fetchingData = async() =>{
     try {
-      const response = await axios.post("http://localhost:5000/api/v1/products/",ProductDetails,{
+      const response = await axios.post(`${import.meta.env.VITE_DOMAIN_NAME}/api/v1/products/`,ProductDetails,{
     headers:{
       Authorization:`Bearer ${token}`
     }
