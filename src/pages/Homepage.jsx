@@ -16,7 +16,7 @@ const HomePage = () => {
     try {
       setLoading(true)
       const response = await axios.get(
-        `http://localhost:5000/api/v1/products/`,
+        `https://backened-0ueb.onrender.com/api/v1/products/`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
