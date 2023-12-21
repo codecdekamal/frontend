@@ -19,6 +19,7 @@ const HomePage = () => {
       console.log(        `${import.meta.env.VITE_DOMAIN_NAME}/api/v1/products/`,
       )
       setLoading(true)
+      toast("Wow so easy!", { type: "success" }); // Notify after successful data fetch
       const response = await axios.get(
         `${import.meta.env.VITE_DOMAIN_NAME}/api/v1/products/`,
         {
@@ -42,7 +43,7 @@ const HomePage = () => {
   useEffect(() => {
     fetchData()
   }, []);
-
+  
   return (
     <>
     <ToastContainer></ToastContainer>
