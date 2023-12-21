@@ -1,7 +1,7 @@
 // ProductDetailPage.js
 import React, { useEffect } from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useParams,useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import Navbar from "../component/Navbar/Navbar";
@@ -14,7 +14,7 @@ const ProductDetailPage = () => {
   const { id } = useParams();
   const allItems = useSelector((store) => store.product.items);
   const [product, setProduct] = useState({});
-  function gettingClickedItem() {
+  function gettingClickedItem () {
     const findingIdItem = allItems.find((item) => item._id == id);
     setProduct(findingIdItem);
   }
@@ -23,8 +23,8 @@ const ProductDetailPage = () => {
   }
   useEffect(()=>{
     gettingClickedItem()
-  },[product])
- 
+  },[id])
+  
   // Dummy product data (replace with actual data or fetch from an API)
   return (
     <>

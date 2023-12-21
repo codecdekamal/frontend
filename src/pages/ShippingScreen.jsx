@@ -41,7 +41,7 @@ const ShippingScreen = () => {
     'Authorization': `Bearer ${token}`,
     'Content-Type': 'application/json'
   };
-const response = await fetch("http://localhost:5000/api/v1/order/", {
+const response = await fetch(`${import.meta.env.VITE_DOMAIN_NAME}/api/v1/order/`, {
       method: "POST",
       headers: headers,
       body: JSON.stringify(addingAddressToCartItems),

@@ -46,7 +46,6 @@ const HomePage = () => {
   return (
     <>
     <ToastContainer></ToastContainer>
-    {loading && <Loadeer />}
     <Navbar/>
     <NavSec/>
     <div className="mb-2 ">
